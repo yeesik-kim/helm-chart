@@ -1,0 +1,24 @@
+# Default values for nhn-pipeline.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+# Deployment
+profile: dev
+
+image:
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: nhn-spinnaker-e31ebefb #anchor-version
+
+# ConfigMap
+toast:
+  skm:
+    keyId:
+      database: 9c19080ce714420fb97c80156cef942b
+      redis: fec95616b7a34ee48c4a2f270b2fec78
+      cipher: 0701792e83d0496a830fc3c65e3debcf
+  cab:
+    baseUri: http://alpha-api-cab.cloud.toastoven.net
+    adminUuid: 4646e4df-f19c-40df-8267-f3f37eba8708
+
+spinnaker:
+  redis: {}
